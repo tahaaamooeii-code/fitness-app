@@ -3,7 +3,7 @@ import type { ExpoConfig } from "expo/config";
 const config: ExpoConfig = {
   name: "TA Fitness App",
   slug: "fitness-app",
-  version: "1.0.3",
+  version: "1.1.0",
   orientation: "portrait",
   scheme: "fitnessapp",
   icon: "./assets/icon.png",
@@ -17,7 +17,7 @@ const config: ExpoConfig = {
   },
   android: {
     package: "ir.tahaamouei.fitnessapp",
-    versionCode: 4,
+    versionCode: 5,
     adaptiveIcon: {
       backgroundColor: "#04061A",
       foregroundImage: "./assets/android-icon-foreground.png",
@@ -31,7 +31,15 @@ const config: ExpoConfig = {
   },
   plugins: [
     "expo-router",
-    "expo-splash-screen",
+    [
+      "expo-splash-screen",
+      {
+        image: "./assets/splash-icon.png",
+        imageWidth: 220,
+        resizeMode: "contain",
+        backgroundColor: "#04061a",
+      },
+    ],
     [
       "expo-image-picker",
       {

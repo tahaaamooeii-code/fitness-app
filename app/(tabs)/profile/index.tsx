@@ -7,6 +7,7 @@ import { ScreenContainer } from "@/components/ui/ScreenContainer";
 import { AppText } from "@/components/ui/AppText";
 import { TextField } from "@/components/ui/TextField";
 import { Button } from "@/components/ui/Button";
+import { MadeByBadge } from "@/components/credit/MadeByBadge";
 import { useTheme } from "@/src/theme/ThemeProvider";
 import { repos } from "@/src/repositories";
 import { saveProfilePhoto } from "@/src/services/photoService";
@@ -120,6 +121,8 @@ export default function ProfileScreen() {
       <View style={{ marginTop: spacing.md }}>
         <Button label="ذخیره تغییرات" onPress={handleSave} loading={saving} />
       </View>
+
+      <MadeByBadge />
     </ScreenContainer>
   );
 }
